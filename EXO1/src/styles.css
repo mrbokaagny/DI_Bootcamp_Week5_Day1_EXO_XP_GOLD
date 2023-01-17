@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+
+*::-webkit-scrollbar{
+  width: 0;
+}
+
+
+input{
+  padding: .2em;
+  height: 35px;
+  border-radius: .3em;
+  width: 75%;
+}
+
+button{
+  border: none;
+  padding: .2em;
+  height: 30px;
+  margin-left: .3em;
+  width: 20%;
+  background-color: orange;
+}

@@ -1,0 +1,29 @@
+<div class="card-content">
+  <div class="title"> Les informations disponibles ! </div>
+  <div class="input-card">
+    <div *ngIf="showError" class="error-card"> Veuillez renseigner le nom d'un auteur !!! </div>
+    <form [formGroup]="formsSearch">
+      <input formControlName="search" name="search" type="text" value="" placeholder="rechercher un auteur ...">
+      <button (click)="onSubmit()">
+        chercher
+      </button>
+    </form>
+  </div>
+  <div class="listing">
+    <div *ngFor ="let book of books" class="item">
+      <div class="picture">
+        <img [class.preview]="book.previewMode"  [src]="book.coverImage ? book.coverImage : ''" class="preview" (click) ="onClickImage(book)">
+      </div>
+      <div class="infouser">
+        <div class="user">
+          <em>Auteur : </em>
+          <span>{{  book.getAuthorsList() }}</span>
+        </div>
+        <div class="info">
+          <em>Livre : </em>
+          <span>{{  book.title }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
